@@ -1,0 +1,35 @@
+﻿<Window x:Class="LiveSteam.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LiveSteam"
+        mc:Ignorable="d"
+        Title="推流" Height="450" Width="1205">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.ColumnSpan="2" >
+        <TextBlock  Text="操作消息:" FontSize="30" VerticalAlignment="Center"/>
+            <TextBox x:Name="txtMsg" Text="无"   FontSize="20" VerticalAlignment="Center" Margin="20 8 0 0"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="1">
+            <ComboBox x:Name="cmbCamera" Width="200" Height="50" Margin="20 0 30 0">
+                
+            </ComboBox>
+            <Button x:Name="btnBegin"  Width="150" Height="80" Content="开启推流" Click="btnBegin_Click"></Button>
+        </StackPanel>
+        <Button x:Name="btnOver" Grid.Row="1"  Grid.Column="1" Width="150" Height="80" Content="结束推流" Click="btnOver_Click"></Button>
+
+        <TextBlock x:Name="txtResponse" Grid.Row="2" Grid.ColumnSpan="2" Text="Msg" FontSize="30" VerticalAlignment="Center"/>
+
+    </Grid>
+</Window>
